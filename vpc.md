@@ -187,6 +187,41 @@ o	IGW/NAT are per VPC / per subnet, no central routing.<br>
 - 	Use Case Example<br>
 o	Private VPCs in multiple regions → central NAT in one VPC → TGW allows all private subnets to access Internet securely.<br>
 o	On-premises data center → VPN → TGW → multiple VPCs.<br>
+<br><br><br><br><br>
+# 🌐 3.AWS VPN(regional)
+Definition [Paid 💸 ]<br>
+•	VPN (Virtual Private Network) = a secure, encrypted connection between:]<br>
+o	On-premises network ↔ AWS VPC (Site-to-Site VPN)]<br>
+o	Remote user ↔ AWS VPC (Client VPN)]<br>
+•	Ensures private, secure access over the Internet.]<br>
+•	💰 Charged per VPN connection per hour + data transfer]<br>
+•	“VPN itself is regional, because it attaches to regional VPC resources. Global access requires Transit Gateway inter-region peering.<br>
+### Types of VPN in AWS
+
+| Type | Description | Use Case | Protocol |
+|------|-------------|----------|----------|
+| Site-to-Site VPN | Connects on-prem network ↔ VPC | Hybrid cloud, office → AWS connectivity | IPsec |
+| Client VPN | Connects individual remote users ↔ VPC | Remote employees accessing private resources | OpenVPN (TLS) |
+
+
+### Components
+1.	Customer Gateway (CGW) – Your on-prem device (router/firewall)
+2.	Virtual Private Gateway (VGW) – AWS side of the VPN, attached to VPC
+3.	VPN Tunnel – Encrypted IPsec or TLS tunnel
+4.	Transit Gateway (optional) – Connects multiple VPCs to centralized VPN
+### Real-World Use Cases
+1.	Hybrid cloud → on-prem servers access AWS EC2/RDS
+2.	Remote workforce → employees access private VPCs
+3.	Disaster recovery → secure backup to AWS
+4.	Centralized multi-VPC access via TGW
+
+
+
+
+
+  
+
+
 
 
 
