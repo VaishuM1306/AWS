@@ -148,7 +148,20 @@ while keeping inbound access blocked for security.<br>
 
 ### ⚙️ Types of NAT (Network Address Translation) in AWS
 Use    NAT Gateway in production for reliability and scale.<br>
-       NAT Instance is older, used mainly for testing or custom routing.”
+       NAT Instance is older, used mainly for testing or custom routing.”<br><br>
+
+ ## 🔄 NAT Gateway vs NAT Instance Comparison
+
+| Point | NAT Gateway | NAT Instance |
+|-------|-------------|--------------|
+| Management | ✅ AWS managed (no admin needed) | ❌ User managed |
+| Scalability | Auto scales | Manual scaling |
+| Availability | Highly available (within AZ) | Single point of failure |
+| Performance | High & consistent | Depends on EC2 size |
+| Security Groups | Not used | Can attach SGs |
+| Cost | Higher | Cheaper but more effort |
+| Use Case | Production | Testing / custom setup |
+
 
 
 
