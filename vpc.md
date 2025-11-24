@@ -73,7 +73,7 @@ Because you want to:
 •	Used for most secure internal workloads (e.g., internal data stores)
 •	Use for database
 
-## 🧭 11. Summary Table
+## 🧭  Summary Table
 
 | Concept | Explanation |
 |--------|-------------|
@@ -83,6 +83,32 @@ Because you want to:
 | Routing | Controlled by Route Table |
 | IP Reservation | 5 IPs per subnet reserved |
 | Purpose | Organize and isolate resources logically |
+
+
+
+<br><br><br><br><br><br>
+# 🌐 3. What is a Route Table?[ Region-Specific]
+A Route Table is a set of rules that decides where network traffic is directed inside your VPC.<br>
+Each rule is called a route, and it tells AWS where to send packets that match a specific destination IP range.<br>
+In short:<br>
+🧩 Route Table = Navigation Map for Your VPC Network Traffic<br>
+
+
+- Component	Description
+Destination	IP range (CIDR block) for traffic to match<br>
+Target	The next hop or gateway to send traffic to (e.g., IGW, NAT, Peering, Local)<br>
+Local Route	Automatically added route for communication within the VPC (cannot be deleted)<br><br><br>
+
+- 🧾 Short Notes (for quick revision)
+•	Route Table: Set of rules deciding where traffic goes in a VPC.
+•	Default Route Table: Auto-created; used by new subnets.
+•	Local Route: Always present for internal VPC traffic.
+•	Public Subnet: Has route → Internet Gateway.
+•	Private Subnet: Has route → NAT Gateway.
+•	Each subnet → 1 route table (but table can serve many subnets).
+•	Used for: Internet access, peering, VPN, and internal routing.
+
+
 
 
 
