@@ -41,7 +41,7 @@
 Public Subnet: 10.0.1.0/24 (256 IPs)<br> 
  Private Subnet: 10.0.2.0/24 (256 IPs) <br>
 Rule: You can’t overlap CIDR blocks if you plan to connect VPCs (peering/TGW).
-<br><br><br><br><br>
+<br><br><br><br>
 # 🌐 2. What is a Subnet?( AZ)
 - A Subnet (short for subnetwork) is a smaller section of your VPC’s IP address range.
 - It divides your VPC CIDR block into smaller parts to organize and control network traffic.<br>
