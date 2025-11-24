@@ -20,7 +20,7 @@
 -	It lets you launch EC2 instances instantly with Internet access, without any network setup.
 
   
-## 🧠 Note
+### 🧠 Note
 -	Only one Default VPC per region
 -	All subnets are public
 -	Do not delete the Default VPC
@@ -36,7 +36,7 @@
 •	Use /16 for large VPCs (many subnets)<br>
 •	Use /24 for small subnets (common)<br><br><br><br><br>
 
-## Example Subnet division: 
+### Example Subnet division: 
  VPC CIDR: 10.0.0.0/16 <br>
 Public Subnet: 10.0.1.0/24 (256 IPs)<br> 
  Private Subnet: 10.0.2.0/24 (256 IPs) <br>
@@ -50,13 +50,13 @@ In AWS:
 - A Subnet = a segment inside that network
 - where you place your EC2 instances, databases, etc.
 
-## Why Do We Need Subnets?
+### Why Do We Need Subnets?
 Because you want to:
 •	Separate resources logically (e.g., web, database, application tiers)
 •	Control access and routing (e.g., public vs. private)
 •	Increase availability by spreading subnets across Availability Zones (AZs)<br><br><br>
-# Types of Subnets
-## There are mainly two types of subnets in AWS:
+### Types of Subnets
+### There are mainly two types of subnets in AWS:
 ### 1️⃣ Public Subnet
 •	Has a route to the Internet Gateway (IGW)
 •	Used for web servers, bastion hosts, load balancers
