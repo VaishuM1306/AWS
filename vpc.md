@@ -56,8 +56,8 @@ Because you want to:
 •	Control access and routing (e.g., public vs. private)
 •	Increase availability by spreading subnets across Availability Zones (AZs)<br><br><br>
 # Types of Subnets
-##There are mainly two types of subnets in AWS:
-##31️⃣ Public Subnet
+## There are mainly two types of subnets in AWS:
+## 31️⃣ Public Subnet
 •	Has a route to the Internet Gateway (IGW)
 •	Used for web servers, bastion hosts, load balancers
 •	Instances can get public IPs to access the Internet
