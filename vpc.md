@@ -37,9 +37,9 @@
 •	Use /24 for small subnets (common)
 
 ## Example Subnet division: 
- VPC CIDR: 10.0.0.0/16 
-Public Subnet: 10.0.1.0/24 (256 IPs) 
- Private Subnet: 10.0.2.0/24 (256 IPs) 
+ VPC CIDR: 10.0.0.0/16 <br>
+Public Subnet: 10.0.1.0/24 (256 IPs)<br> 
+ Private Subnet: 10.0.2.0/24 (256 IPs) <br>
 Rule: You can’t overlap CIDR blocks if you plan to connect VPCs (peering/TGW).
 
 
