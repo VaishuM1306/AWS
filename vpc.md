@@ -73,7 +73,7 @@ Because you want to:
 •	Used for most secure internal workloads (e.g., internal data stores)
 •	Use for database
 
-## 🧭  Summary Table
+### 🧭  Summary Table
 
 | Concept | Explanation |
 |--------|-------------|
