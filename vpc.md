@@ -34,7 +34,7 @@
 •	Each subnet inside the VPC gets a smaller CIDR block. <br>
 •	AWS reserves 5 IPs per subnet (first 4 + last 1). <br>
 •	Use /16 for large VPCs (many subnets)<br>
-•	Use /24 for small subnets (common)<br><br><br><br><br>
+•	Use /24 for small subnets (common)<br><br><br>
 
 ### Example Subnet division: 
  VPC CIDR: 10.0.0.0/16 <br>
