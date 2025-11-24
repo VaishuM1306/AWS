@@ -228,7 +228,6 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 - You cannot use the same endpoint across multiple regions.
 - Gateway endpoints are free, but Interface endpoints are paid.
 
----
 
 ### 🔹 Types of VPC Endpoints
 
@@ -237,7 +236,6 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 | Interface Endpoint | Uses Elastic Network Interfaces (ENIs) with private IPs in your VPC subnets. | Connect to AWS services like EC2 API, S3 (optional), SNS, SQS, or private SaaS services. |
 | Gateway Endpoint | Targets S3 or DynamoDB only; configured in route tables. | Private access to S3 buckets or DynamoDB tables without Internet access. |
 
----
 
 ### 🎯 Use Cases
 1. Private S3 Access — EC2 instances in private subnets access S3 without NAT Gateway.
@@ -256,7 +254,7 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 - **Stateful**  
   If you allow inbound traffic, response traffic is automatically allowed even if outbound rules do not explicitly allow it.
 
----
+
 
 ### 🎯 Use Cases
 1. Web server SG — Allow inbound HTTP/HTTPS (80/443), allow SSH (22) from admin IP only, allow all outbound.
@@ -275,14 +273,12 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 - **Stateless**  
   You must explicitly allow return traffic in outbound rules.
 
----
 
 ### 🎯 Use Cases
 1. Extra layer of security on top of Security Groups.
 2. Restrict traffic to subnet-wide ranges (e.g., block a malicious IP).
 3. Multi-tier architecture → subnet-level traffic control.
 
----
 
 ### 🔄 Difference Between Security Group & NACL
 
@@ -296,7 +292,7 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 
 
 
----
+---<br><><br><br>
 
 # 🌐 9. AWS VPC Peering (Region / Inter-Region Optional)
 
@@ -304,7 +300,7 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 - VPC Peering = A private network connection between two VPCs, allowing instances in those VPCs to communicate as if they are in the same network.
 - Traffic is private, encrypted on the AWS network, and does not traverse the Internet.
 
----
+
 
 ### 🔹 Key Features
 
@@ -317,7 +313,6 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 | No transitive peering | A → B, B → C ≠ A → C (must create explicit peering per pair) |
 | Supports IPv4 & IPv6 | Both addressing schemes supported |
 
----
 
 ### 🎯 Use Cases
 1. Multi-VPC architecture — Connect VPCs in same account or different accounts for internal services.
@@ -326,7 +321,7 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 
 
 
----
+---<br><><br><br>
 
 # 🌐 10. VPS (Virtual Private Server)
 
