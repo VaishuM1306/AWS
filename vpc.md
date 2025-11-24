@@ -24,8 +24,7 @@
 -	Only one Default VPC per region
 -	All subnets are public
 -	Do not delete the Default VPC
--	For production, create a Custom VPC with private<br><br><br>
-
+-	For production, create a Custom VPC with private<br><br><br><br><br>
 
 
 # 1.CIDR Block (IP Range) 
@@ -106,7 +105,32 @@ Local Route	Automatically added route for communication within the VPC (cannot b
 •	Public Subnet: Has route → Internet Gateway.<br>
 •	Private Subnet: Has route → NAT Gateway.<br>
 •	Each subnet → 1 route table (but table can serve many subnets).<br>
-•	Used for: Internet access, peering, VPN, and internal routing.<br>
+•	Used for: Internet access, peering, VPN, and internal routing.<br><br><br><br><br>
+
+
+
+🌐4. Internet Gateway (IGW) — (Region)
+🔹 Definition    FREE ✅
+Internet Gateway (IGW) is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the Internet.<br>
+Ist is used provide internate to public subnet.
+### Very Important Practical Points
+⭐ A subnet becomes public only when:<br>
+1.	Its Route Table has route to IGW<br>
+2.	Its instances have Public or Elastic IPs<br>
+3.	Security Group allows inbound/outbound traffic<br>
+4.	VPC has IGW attached<br>
+5.	 IGW → Works at VPC level, not subnet level.<br>
+6.	IGW → Mandatory for NAT Gateway (public subnet).<br>
+ Interview-Focused Key Takeaways (Remember These!)<br>
+1.	⭐ IGW must be attached to VPC → No Internet access without it.<br>
+2.	⭐ Route Table must have 0.0.0.0/0 → igw-id.<br>
+3.	⭐ Instance must have Public / Elastic IP to use IGW.<br>
+4.	⭐ One IGW per VPC (cannot attach multiple IGWs).<br>
+5.	⭐ IGW required for NAT Gateway to work.<br>
+6.	⭐ IGW handles 1:1 NAT automatically.<br>
+7.	⭐ Security Group + NACL rules must allow traffic for IGW connection.<br>
+8.	⭐ VPC is isolated until IGW is attached.<br>
+     9. ⭐ Supports both IPv4 (0.0.0.0/0) and IPv6 (::/0) for Internet routes.<br>
 
 
 
