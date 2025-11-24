@@ -1,6 +1,6 @@
 # vpc
--•	Amazon VPC lets you create a logically isolated network inside AWS. 
--•	You control IP ranges, subnets, routing, firewalls, and connectivity.
+-	Amazon VPC lets you create a logically isolated network inside AWS. 
+-	You control IP ranges, subnets, routing, firewalls, and connectivity.
 -•	It’s like building your own data center inside AWS. 
 -•	Every AWS account gets a default VPC, but you can also create custom VPCs for more control.
 -•	You can have multiple VPC in ASW region (max 5oer region-soft limit)
