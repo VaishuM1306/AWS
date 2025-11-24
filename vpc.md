@@ -150,7 +150,7 @@ while keeping inbound access blocked for security.<br>
 Use    NAT Gateway in production for reliability and scale.<br>
        NAT Instance is older, used mainly for testing or custom routing.”<br><br>
 
- ## 🔄 NAT Gateway vs NAT Instance Comparison
+ ###🔄 NAT Gateway vs NAT Instance Comparison
 
 | Point | NAT Gateway | NAT Instance |
 |-------|-------------|--------------|
@@ -161,6 +161,32 @@ Use    NAT Gateway in production for reliability and scale.<br>
 | Security Groups | Not used | Can attach SGs |
 | Cost | Higher | Cheaper but more effort |
 | Use Case | Production | Testing / custom setup |
+<br><br><br><br>
+
+
+# 🌐6. AWS Transit Gateway (TGW)   (Region / Inter-Region optional)<br>
+Definition [Paid 💸 ]<br>
+•	TGW = a central hub that connects multiple VPCs, VPNs, and on-premises networks.<br>
+•	Simplifies network management and reduces the need for complex VPC peering.<br>
+•	Charged per attachment per hour($0.05 – $0.10) + data processing per GB. 💰($0.02 – $0.05 per GB)<br>
+•	“Transit Gateway is a regional service. Global connectivity is only possible via inter region peering.”<br>
+### Why Use Transit Gateway (TGW) When We Have IGW & NAT?
+- 1.	IGW and NAT are limited in scope<br>
+o	IGW: Only allows Internet access for public subnets.<br>
+o	NAT Gateway: Allows outbound Internet for private subnets.<br>
+o	❌ Neither handles VPC-to-VPC or multi-VPC on-prem connectivity.<br>
+- 2.	Centralized VPC-to-VPC Communication<br>
+o	If you have 5–10+ VPCs, connecting them with VPC Peering creates a full-mesh, which is hard to manage.<br>
+o	TGW acts as a hub, so all VPCs can communicate through one central router.<br>
+- 3.	Hybrid Cloud / On-Prem Connectivity
+o	TGW integrates with VPN or Direct Connect, enabling secure connections between on-prem networks → multiple VPCs.<br>
+o	IGW/NAT cannot do this.<br>
+- 4.	High Scalability & Management<br>
+o	With TGW, you can scale to thousands of VPCs and centralize routing.<br>
+o	IGW/NAT are per VPC / per subnet, no central routing.<br>
+- 5.	Use Case Example<br>
+o	Private VPCs in multiple regions → central NAT in one VPC → TGW allows all private subnets to access Internet securely.<br>
+o	On-premises data center → VPN → TGW → multiple VPCs.<br>
 
 
 
