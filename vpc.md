@@ -42,7 +42,7 @@ Public Subnet: 10.0.1.0/24 (256 IPs)<br>
  Private Subnet: 10.0.2.0/24 (256 IPs) <br>
 Rule: You can’t overlap CIDR blocks if you plan to connect VPCs (peering/TGW).
 <br><br><br>
-#🌐 2. What is a Subnet?( AZ)
+# 🌐 2. What is a Subnet?( AZ)
 - A Subnet (short for subnetwork) is a smaller section of your VPC’s IP address range.
 - It divides your VPC CIDR block into smaller parts to organize and control network traffic.<br>
 In AWS:
@@ -54,7 +54,35 @@ In AWS:
 Because you want to:
 •	Separate resources logically (e.g., web, database, application tiers)
 •	Control access and routing (e.g., public vs. private)
-•	Increase availability by spreading subnets across Availability Zones (AZs)
+•	Increase availability by spreading subnets across Availability Zones (AZs)<br><br><br>
+# Types of Subnets
+##There are mainly two types of subnets in AWS:
+##31️⃣ Public Subnet
+•	Has a route to the Internet Gateway (IGW)
+•	Used for web servers, bastion hosts, load balancers
+•	Instances can get public IPs to access the Internet
+•	Eg.use for web deployment
+
+## 2️⃣ Private Subnet
+•	No direct Internet access
+•	Used for databases, backend services, internal apps
+•	If Internet access is needed, traffic goes via a NAT Gateway
+
+## 3️⃣ Isolated Subnet
+•	No Internet access at all
+•	Used for most secure internal workloads (e.g., internal data stores)
+•	Use for database
+
+## 🧭 11. Summary Table
+Concept	
+Explanation
+Subnet	A smaller range inside a VPC CIDR
+Public Subnet	Has route to Internet Gateway
+Private Subnet	Has route to NAT Gateway
+Routing	Controlled by Route Table
+IP Reservation	5 IPs per subnet reserved
+Purpose	Organize and isolate resources logically
+
 
 
 
