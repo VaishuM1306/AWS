@@ -41,6 +41,24 @@
 Public Subnet: 10.0.1.0/24 (256 IPs)<br> 
  Private Subnet: 10.0.2.0/24 (256 IPs) <br>
 Rule: You can’t overlap CIDR blocks if you plan to connect VPCs (peering/TGW).
+<br><br><br>
+#🌐 2. What is a Subnet?( AZ)
+- A Subnet (short for subnetwork) is a smaller section of your VPC’s IP address range.
+- It divides your VPC CIDR block into smaller parts to organize and control network traffic.<br>
+In AWS:
+-	A VPC = your private virtual network
+- A Subnet = a segment inside that network
+- where you place your EC2 instances, databases, etc.
+
+## Why Do We Need Subnets?
+Because you want to:
+•	Separate resources logically (e.g., web, database, application tiers)
+•	Control access and routing (e.g., public vs. private)
+•	Increase availability by spreading subnets across Availability Zones (AZs)
+
+
+
+
 
 
 
