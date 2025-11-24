@@ -13,3 +13,16 @@
 -	Amazon VPC Flow logs can be used to monitor traffic within a VPC.
 -	A VPC can span multiple Availability Zones by using multiple subnets.
 
+
+
+#🧭 Default VPC – 
+-	Default VPC is a pre-created Virtual Private Cloud provided by AWS in every region.
+-	It lets you launch EC2 instances instantly with Internet access, without any network setup.
+
+  
+	🧠 Note
+-	Only one Default VPC per region
+-	All subnets are public
+-	Do not delete the Default VPC
+-	For production, create a Custom VPC with private
+
