@@ -38,8 +38,8 @@
 
 ## Example Subnet division: 
  VPC CIDR: 10.0.0.0/16 
-o Public Subnet: 10.0.1.0/24 (256 IPs) 
-o Private Subnet: 10.0.2.0/24 (256 IPs) 
+Public Subnet: 10.0.1.0/24 (256 IPs) 
+ Private Subnet: 10.0.2.0/24 (256 IPs) 
 Rule: You can’t overlap CIDR blocks if you plan to connect VPCs (peering/TGW).
 
 
