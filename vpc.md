@@ -24,17 +24,17 @@
 -	Only one Default VPC per region
 -	All subnets are public
 -	Do not delete the Default VPC
--	For production, create a Custom VPC with private
+-	For production, create a Custom VPC with private<br><br><br>
 
 
 
 # 1.CIDR Block (IP Range) 
-•	A CIDR (Classless Inter-Domain Routing) block defines the IP address range of your VPC.
-•	Example: 10.0.0.0/16 → gives you 65,536 IPs. 
-•	Each subnet inside the VPC gets a smaller CIDR block. 
-•	AWS reserves 5 IPs per subnet (first 4 + last 1). 
-•	Use /16 for large VPCs (many subnets)
-•	Use /24 for small subnets (common)
+•	A CIDR (Classless Inter-Domain Routing) block defines the IP address range of your VPC.<br>
+•	Example: 10.0.0.0/16 → gives you 65,536 IPs.<br>
+•	Each subnet inside the VPC gets a smaller CIDR block. <br>
+•	AWS reserves 5 IPs per subnet (first 4 + last 1). <br>
+•	Use /16 for large VPCs (many subnets)<br>
+•	Use /24 for small subnets (common)<br>
 
 ## Example Subnet division: 
  VPC CIDR: 10.0.0.0/16 <br>
