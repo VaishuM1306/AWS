@@ -15,12 +15,12 @@
 
 
 
-#🧭 Default VPC – 
+# 🧭 Default VPC – 
 -	Default VPC is a pre-created Virtual Private Cloud provided by AWS in every region.
 -	It lets you launch EC2 instances instantly with Internet access, without any network setup.
 
   
-	🧠 Note
+# 🧠 Note
 -	Only one Default VPC per region
 -	All subnets are public
 -	Do not delete the Default VPC
