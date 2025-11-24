@@ -218,6 +218,124 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 4.	Centralized multi-VPC access via TGW)<br>
 
 
+<br><br><br><br>
+
+# 🌐 6. AWS VPC Endpoints (Regional)
+
+### 📌 Definition (PAID + FREE)
+- VPC Endpoint allows you to privately connect your VPC to supported AWS services or VPC endpoint services without using an Internet Gateway (IGW), NAT device, VPN, or firewall.
+- Traffic stays within the AWS network, improving security and performance.
+- You cannot use the same endpoint across multiple regions.
+- Gateway endpoints are free, but Interface endpoints are paid.
+
+---
+
+### 🔹 Types of VPC Endpoints
+
+| Type | Description | Use Case |
+|------|-------------|----------|
+| Interface Endpoint | Uses Elastic Network Interfaces (ENIs) with private IPs in your VPC subnets. | Connect to AWS services like EC2 API, S3 (optional), SNS, SQS, or private SaaS services. |
+| Gateway Endpoint | Targets S3 or DynamoDB only; configured in route tables. | Private access to S3 buckets or DynamoDB tables without Internet access. |
+
+---
+
+### 🎯 Use Cases
+1. Private S3 Access — EC2 instances in private subnets access S3 without NAT Gateway.
+2. Private API Access — Connect to AWS services or partner SaaS securely.
+3. Hybrid Cloud — Use interface endpoints to access AWS services privately from on-premises networks.
+
+
+
+---
+
+# 🌐 7. AWS Security Group (SG) (Regional)
+
+### 📌 Definition (FREE)
+- Security Group = Virtual Firewall for EC2 instances (and other resources like RDS, ELB)
+- Controls inbound and outbound traffic at the instance level.
+- **Stateful**  
+  If you allow inbound traffic, response traffic is automatically allowed even if outbound rules do not explicitly allow it.
+
+---
+
+### 🎯 Use Cases
+1. Web server SG — Allow inbound HTTP/HTTPS (80/443), allow SSH (22) from admin IP only, allow all outbound.
+2. Database SG — Allow inbound MySQL/Port 3306 only from app server SG; deny everything else.
+3. Multi-tier architecture — Use SG references to control traffic between tiers instead of IPs.
+
+
+
+---
+
+# 🌐 8. AWS Network ACL (NACL) (AZ Level)
+
+### 📌 Definition (FREE)
+- NACL (Network Access Control List) = Subnet-level firewall in a VPC.
+- Controls inbound and outbound traffic for the entire subnet.
+- **Stateless**  
+  You must explicitly allow return traffic in outbound rules.
+
+---
+
+### 🎯 Use Cases
+1. Extra layer of security on top of Security Groups.
+2. Restrict traffic to subnet-wide ranges (e.g., block a malicious IP).
+3. Multi-tier architecture → subnet-level traffic control.
+
+---
+
+### 🔄 Difference Between Security Group & NACL
+
+| Feature | Security Group | NACL |
+|--------|---------------|------|
+| Level | Instance | Subnet |
+| Stateful / Stateless | Stateful | Stateless |
+| Allow / Deny | Allow only | Allow & Deny |
+| Multiple per instance | Yes | One per subnet |
+| Default rule | Deny all inbound/outbound except allowed | Allow all inbound/outbound by default |
+
+
+
+---
+
+# 🌐 9. AWS VPC Peering (Region / Inter-Region Optional)
+
+### 📌 Definition
+- VPC Peering = A private network connection between two VPCs, allowing instances in those VPCs to communicate as if they are in the same network.
+- Traffic is private, encrypted on the AWS network, and does not traverse the Internet.
+
+---
+
+### 🔹 Key Features
+
+| Feature | Description |
+|--------|-------------|
+| Private connectivity | VPCs communicate via private IP addresses |
+| One-to-One Connection | Each peering connection is between exactly two VPCs |
+| Region | Can be intra-region or inter-region |
+| No bandwidth bottleneck | Uses AWS internal network; high performance |
+| No transitive peering | A → B, B → C ≠ A → C (must create explicit peering per pair) |
+| Supports IPv4 & IPv6 | Both addressing schemes supported |
+
+---
+
+### 🎯 Use Cases
+1. Multi-VPC architecture — Connect VPCs in same account or different accounts for internal services.
+2. Centralized services — One VPC hosts shared services (database, APIs), others access via peering.
+3. Inter-region communication — Share data or services across regions.
+
+
+
+---
+
+# 🌐 10. VPS (Virtual Private Server)
+
+### 📌 Definition
+- A VPS is a virtual machine hosted on a physical server, sharing resources with other VPSs but isolated from them.
+- Provides dedicated resources like CPU, RAM, storage, and OS for a single user.
+
+
+
 
 
 
