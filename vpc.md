@@ -99,14 +99,14 @@ Destination	IP range (CIDR block) for traffic to match<br>
 Target	The next hop or gateway to send traffic to (e.g., IGW, NAT, Peering, Local)<br>
 Local Route	Automatically added route for communication within the VPC (cannot be deleted)<br><br><br>
 
-- 🧾 Short Notes (for quick revision)
-•	Route Table: Set of rules deciding where traffic goes in a VPC.
-•	Default Route Table: Auto-created; used by new subnets.
-•	Local Route: Always present for internal VPC traffic.
-•	Public Subnet: Has route → Internet Gateway.
-•	Private Subnet: Has route → NAT Gateway.
-•	Each subnet → 1 route table (but table can serve many subnets).
-•	Used for: Internet access, peering, VPN, and internal routing.
+- 🧾 Short Notes (for quick revision)<br>
+•	Route Table: Set of rules deciding where traffic goes in a VPC.<br>
+•	Default Route Table: Auto-created; used by new subnets.<br>
+•	Local Route: Always present for internal VPC traffic.<br>
+•	Public Subnet: Has route → Internet Gateway.<br>
+•	Private Subnet: Has route → NAT Gateway.<br>
+•	Each subnet → 1 route table (but table can serve many subnets).<br>
+•	Used for: Internet access, peering, VPN, and internal routing.<br>
 
 
 
