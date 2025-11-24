@@ -131,6 +131,27 @@ Ist is used provide internate to public subnet.
 7.	⭐ Security Group + NACL rules must allow traffic for IGW connection.<br>
 8.	⭐ VPC is isolated until IGW is attached.<br>
 9. ⭐ Supports both IPv4 (0.0.0.0/0) and IPv6 (::/0) for Internet routes.<br>
+<br><br><br><br><br>
+# 5.AWS NAT Gateway  (AZ-specific)
+What is a NAT Gateway?     [ PAID  💸] US $0.045 per hour.<br>
+NAT Gateway (Network Address Translation Gateway) is a managed AWS service that allows instances in a private subnet to access the Internet, without exposing them to inbound Internet traffic.<br>
+➡️ Purpose:
+ Allow outbound Internet connections from private subnets (for updates, downloads, etc.)
+while keeping inbound access blocked for security.<br>
+1️⃣ Give Internet access to private subnet instances (outbound only)<br>
+2️⃣ Hide private IPs from the Internet (security)<br>
+3️⃣ Translate private IP → public IP for outbound traffic<br>
+4️⃣ Work with IGW to send traffic to the Internet<br>
+5️⃣ Allow private EC2s to download updates or access APIs<br>
+6️⃣ One NAT can serve multiple private subnets (in same AZ)<br>
+7️⃣ No inbound connections allowed – outbound only<br>
+
+### ⚙️ Types of NAT (Network Address Translation) in AWS
+Use    NAT Gateway in production for reliability and scale.<br>
+       NAT Instance is older, used mainly for testing or custom routing.”
+
+
+
 
 
 
