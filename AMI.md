@@ -27,20 +27,20 @@ Paid AMIs/Marketplace AMIs: Provided by third parties through AWS Marketplace, o
 
 
 
-Common use cases for each type:
-Public: Testing or development environments.
+- Common use cases for each type:
+Public: Testing or development environments.<br>
 
-Private: Customized setups for production.
+Private: Customized setups for production.<br>
 
-Marketplace: Deploying pre-built solutions (e.g., enterprise software).
+Marketplace: Deploying pre-built solutions (e.g., enterprise software).<br>
 
 
-Run Cleanup Script
+### Run Cleanup Script
 #!/bin/bash
 
-Remove SSH keys---- rm -rf ~/.ssh/authorized_keys
+- Remove SSH keys---- rm -rf ~/.ssh/authorized_keys
 
-Clear user credentials and history
+- Clear user credentials and history
 
 rm -rf ~/.aws/credentials
 
@@ -48,36 +48,38 @@ rm -rf ~/.git-credentials
 
 rm -rf ~/.bash_history
 
-Clean system logs and temporary files
+- Clean system logs and temporary files
 rm -rf /var/log/*
 
 rm -rf /tmp/*
 
 rm -rf /var/tmp/*
 
-Remove user accounts
+- Remove user accounts
 deluser tempuser --remove-home
 
 Lock root account
 passwd -l root
 
-Reset configuration files (example for Nginx)
+- Reset configuration files (example for Nginx)
 rm -rf /etc/nginx/nginx.con
 
-Key Differences
-Feature	Create Launch Template	Create Image (AMI)
-Purpose	Create a reusable blueprint for launching instances	Create a custom AMI snapshot of an instance
-Content	Contains configuration settings (e.g., AMI, instance type, security groups, etc.)	Captures OS, applications, configurations, and data
-Reusability	Used repeatedly to launch new instances in a consistent way	Used to create new instances that replicate the captured image
-Use Cases	Auto Scaling, Spot Instances, Standardizing instance settings	Backup, Replication, Migrating instances to another region
-Versioning	Can have multiple versions for different configurations	Typically,
-What AWS Image Builder Does
-Automates image creation pipelines
-Applies updates and security patches
-Runs tests on images
-Outputs AMIs, Docker images, and more
-Ensures consistent and compliant golden images
-Automate VM or Image Creation
-creation, testing, and deployment of AMIs
-Can be configured to run at regular intervals (e.g., daily, weekly, or monthly)
+- Key Differences<br>
+Feature	Create Launch Template	Create Image (AMI)<br>
+Purpose	Create a reusable blueprint for launching instances	Create a custom AMI snapshot of an instance<br>
+Content	Contains configuration settings (e.g., AMI, instance type, security groups, etc.)	Captures OS, applications, configurations, and data<br>
+Reusability	Used repeatedly to launch new instances in a consistent way	Used to create new instances that replicate the captured image<br>
+Use Cases	Auto Scaling, Spot Instances, Standardizing instance settings	Backup, Replication, Migrating instances to another region<br>
+Versioning	Can have multiple versions for different configurations	Typically,<br><br><br>
+
+
+### What AWS Image Builder Does
+- Automates image creation pipelines
+- Applies updates and security patches
+- Runs tests on images
+- Outputs AMIs, Docker images, and more
+- Ensures consistent and compliant golden images
+- Automate VM or Image Creation
+- creation, testing, and deployment of AMIs
+- Can be configured to run at regular intervals (e.g., daily, weekly, or monthly)
 Free
