@@ -135,6 +135,28 @@ passwd -l root<br>
 rm -rf /etc/nginx/nginx.con<br>
 
 
+### Key Differences
+
+| Feature | Create Launch Template | Create Image (AMI) |
+|---------|-------------------------|----------------------|
+| Purpose | Create a reusable blueprint for launching instances | Create a custom AMI snapshot of an instance |
+| Content | Contains configuration settings (e.g., AMI, instance type, security groups, etc.) | Captures OS, applications, configurations, and data |
+| Reusability | Used repeatedly to launch new instances in a consistent way | Used to create new instances that replicate the captured image |
+| Use Cases | Auto Scaling, Spot Instances, Standardizing instance settings | Backup, Replication, Migrating instances to another region |
+| Versioning | Can have multiple versions for different configurations | Typically,
+
+
+
+### What AWS Image Builder Does
+- Automates image creation pipelines  
+- Applies updates and security patches  
+- Runs tests on images  
+- Outputs AMIs, Docker images, and more  
+- Ensures consistent and compliant golden images
+
+
+
+
 
 
 
