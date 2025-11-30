@@ -45,3 +45,50 @@ EBS volumes come in two main categories:
 | gp2 | ⚙️ Medium | Test servers, small databases | 💵 (Moderate) |
 | st1 | 📀 Low–Medium | Big data, log processing | 🟩 (Cheap) |
 | sc1 | 🧊 Low | Backups, rarely accessed data | 🟩 (Cheapest) |
+
+
+# AMI (Amazon Machine Image)
+
+An Amazon Machine Image (AMI) is a pre-configured template
+that provides the necessary information to launch an EC2
+instance in AWS. <br>
+With an AMI, you can launch new EC2 instances with
+a consistent, predefined configuration.<br>
+
+
+You can also create custom AMIs to include specific
+software or settings, allowing for quick replication of
+environments.<br>
+<br><br><br>
+
+
+
+### It includes:
+
+- Operating system (e.g., Linux, Windows)
+
+- Application server (e.g., Apache, Nginx)
+
+- Pre-installed software and configurations<br><br>
+
+
+Types of AWS AMIs
+
+
+- Public AMIs: Available to all AWS users. Useful for basic use
+cases like popular operating systems (e.g., Ubuntu, CentOS).
+
+
+- Private AMIs: Created by a user and only available within that
+account or shared with specific accounts.
+
+
+- Paid AMIs/Marketplace AMIs: Provided by third parties
+through AWS Marketplace, offering software like databases,
+web servers, or pre-configured environments.
+
+
+
+
+
+
