@@ -13,7 +13,7 @@
 4. Storage Optimized → For high disk throughput (e.g., i3, d2).<br> 
 5. Accelerated CompuƟng → GPU, FPGA for ML/AI (e.g., p3, g4).<br><br><br>
 
-# EC2 Purchase Plans (Short)
+# EC2 Purchase Plans 
 
 1. **On-Demand** – Pay per use, no commitment, expensive.  <br> 
 2. **Reserved Instances (RI)** – 1/3 year commitment, cheaper, steady workloads.<br> 
@@ -31,7 +31,7 @@ DefiniƟon: Control how your EC2 instances are placed across hardware.
 3. ParƟƟon Placement Group → Instances grouped into parƟƟons; used in big data, Hadoop clusters.<br>
 
 
-# Elastic IP (EIP) – AWS (Short Notes)
+# Elastic IP (EIP) – AWS 
 
 - **Definition:** Static public IPv4 address for EC2 that doesn’t change when instance stops/starts.
 - **Features:**
