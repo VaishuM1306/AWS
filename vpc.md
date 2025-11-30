@@ -327,7 +327,18 @@ o	Remote user ↔ AWS VPC (Client VPN)]<br>
 
 ### 📌 Definition
 - A VPS is a virtual machine hosted on a physical server, sharing resources with other VPSs but isolated from them.
-- Provides dedicated resources like CPU, RAM, storage, and OS for a single user.
+- Provides dedicated resources like CPU, RAM, storage, and OS for a single user.<br><br>
+
+
+### ElasƟc Network Interface (ENI)
+- A virtual network card that aƩaches to an EC2 instance.
+### Each ENI has: 
+- Primary private IPv4 address.
+- OpƟonal secondary private/public IPs.
+- Security Groups. 
+- MAC address. 
+- ENIs can be moved between instances for high availability. 
+- Example: If one EC2 fails, detach ENI → aƩach to backup EC2 → same IP → traffic resumes.
 
 
 
