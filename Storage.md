@@ -47,7 +47,7 @@ EBS volumes come in two main categories:
 | sc1 | 🧊 Low | Backups, rarely accessed data | 🟩 (Cheapest) |
 
 
-# AMI (Amazon Machine Image)
+# 2. AMI (Amazon Machine Image)
 
 An Amazon Machine Image (AMI) is a pre-configured template
 that provides the necessary information to launch an EC2
@@ -86,6 +86,55 @@ account or shared with specific accounts.
 - Paid AMIs/Marketplace AMIs: Provided by third parties
 through AWS Marketplace, offering software like databases,
 web servers, or pre-configured environments.
+<br><br><br>
+### Common use cases for each type:
+
+
+- Public: Testing or development environments.
+
+- Private: Customized setups for production.
+
+- Marketplace: Deploying pre-built solutions (e.g.,
+enterprise software).<br><br>
+
+#Run Cleanup Script
+#!/bin/bash
+
+
+# Remove SSH keys----  rm -rf ~/.ssh/authorized_keys
+
+
+- Clear user credentials and history
+
+rm -rf ~/.aws/credentials<br>
+
+rm -rf ~/.git-credentials<br>
+
+rm -rf ~/.bash_history<br>
+
+
+-  Clean system logs and temporary files
+
+rm -rf /var/log/*<br>
+
+rm -rf /tmp/*<br>
+
+rm -rf /var/tmp/*<br>
+
+
+- Remove user accounts
+
+deluser tempuser --remove-home<br>
+
+
+- Lock root account
+
+passwd -l root<br>
+
+
+- Reset configuration files (example for Nginx)
+
+rm -rf /etc/nginx/nginx.con<br>
 
 
 
