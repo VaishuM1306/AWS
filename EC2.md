@@ -21,5 +21,15 @@
 4. **Spot Instances** – Use unused capacity, very cheap, can be terminated anytime.  <br> 
 5. **Dedicated Hosts** – Entire server for you, expensive, compliance/BYOL.  <br> 
 6. **Dedicated Instances** – Isolated hardware, cheaper than hosts, compliance workloads. <br>  
-7. **Capacity Reservations** – Reserve capacity in AZ, no long-term commitment.<br> 
+7. **Capacity Reservations** – Reserve capacity in AZ, no long-term commitment.<br><br>
+
+#ElasƟc Network Interface (ENI)
+ A virtual network card that aƩaches to an EC2 instance.
+### Each ENI has: 
+- Primary private IPv4 address.
+- -OpƟonal secondary private/public IPs.
+- Security Groups. 
+- MAC address. 
+- ENIs can be moved between instances for high availability. 
+- Example: If one EC2 fails, detach ENI → aƩach to backup EC2 → same IP → traffic resumes.
 
