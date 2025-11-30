@@ -30,3 +30,23 @@ DefiniƟon: Control how your EC2 instances are placed across hardware.
 2. Spread Placement Group → Instances spread across different hardware for fault tolerance.<br>
 3. ParƟƟon Placement Group → Instances grouped into parƟƟons; used in big data, Hadoop clusters.<br>
 
+
+# Elastic IP (EIP) – AWS (Short Notes)
+
+- **Definition:** Static public IPv4 address for EC2 that doesn’t change when instance stops/starts.
+- **Features:**
+  - Static & remappable to any instance in the same region.
+  - Free when associated with a running instance; charged if unused.
+  - Default limit: 5 per region.
+  - IPv4 only.
+- **Use Cases:**
+  - Maintain static IP for web servers, DNS, VPN.
+  - Failover & high availability.
+- **Limitations:**
+  - Charges for unused EIP.
+  - One EIP per instance.
+  - Cannot attach across regions.
+- **Example:**  
+  Re-associate EIP from a crashed EC2 to a new EC2 → users continue accessing without interruption.
+
+
