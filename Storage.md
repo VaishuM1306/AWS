@@ -153,6 +153,11 @@ rm -rf /etc/nginx/nginx.con<br>
 - Runs tests on images  
 - Outputs AMIs, Docker images, and more  
 - Ensures consistent and compliant golden images
+- Automate VM or Image Creation
+- creation, testing, and deployment of AMIs
+- Can be configured to run at regular intervals
+(e.g., daily, weekly, or monthly)
+- Free
 
 
 
