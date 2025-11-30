@@ -47,117 +47,47 @@ EBS volumes come in two main categories:
 | sc1 | 🧊 Low | Backups, rarely accessed data | 🟩 (Cheapest) |
 
 
-# 2. AMI (Amazon Machine Image)
+### Limitations
 
-An Amazon Machine Image (AMI) is a pre-configured template
-that provides the necessary information to launch an EC2
-instance in AWS. <br>
-With an AMI, you can launch new EC2 instances with
-a consistent, predefined configuration.<br>
-
-
-You can also create custom AMIs to include specific
-software or settings, allowing for quick replication of
-environments.<br>
-<br><br><br>
+- Cannot be shared by multiple EC2 (except EBS Multi-Attach for io1/io2)
+- AZ locked
+- More expensive than instance store
 
 
 
-### It includes:
 
-- Operating system (e.g., Linux, Windows)
-
-- Application server (e.g., Apache, Nginx)
-
-- Pre-installed software and configurations<br><br>
-
-
-Types of AWS AMIs
-
-
-- Public AMIs: Available to all AWS users. Useful for basic use
-cases like popular operating systems (e.g., Ubuntu, CentOS).
-
-
-- Private AMIs: Created by a user and only available within that
-account or shared with specific accounts.
-
-
-- Paid AMIs/Marketplace AMIs: Provided by third parties
-through AWS Marketplace, offering software like databases,
-web servers, or pre-configured environments.
-<br><br><br>
-### Common use cases for each type:
-
-
-- Public: Testing or development environments.
-
-- Private: Customized setups for production.
-
-- Marketplace: Deploying pre-built solutions (e.g.,
-enterprise software).<br><br>
-
-# Run Cleanup Script
-#!/bin/bash
-- Remove SSH keys----  rm -rf ~/.ssh/authorized_keys
-
-
-- Clear user credentials and history
-
-rm -rf ~/.aws/credentials<br>
-
-rm -rf ~/.git-credentials<br>
-
-rm -rf ~/.bash_history<br>
-
-
--  Clean system logs and temporary files
-
-rm -rf /var/log/*<br>
-
-rm -rf /tmp/*<br>
-
-rm -rf /var/tmp/*<br>
-
-
-- Remove user accounts
-
-deluser tempuser --remove-home<br>
-
-
-- Lock root account
-
-passwd -l root<br>
-
-
-- Reset configuration files (example for Nginx)
-
-rm -rf /etc/nginx/nginx.con<br>
-
-
-### Key Differences
-
-| Feature | Create Launch Template | Create Image (AMI) |
-|---------|-------------------------|----------------------|
-| Purpose | Create a reusable blueprint for launching instances | Create a custom AMI snapshot of an instance |
-| Content | Contains configuration settings (e.g., AMI, instance type, security groups, etc.) | Captures OS, applications, configurations, and data |
-| Reusability | Used repeatedly to launch new instances in a consistent way | Used to create new instances that replicate the captured image |
-| Use Cases | Auto Scaling, Spot Instances, Standardizing instance settings | Backup, Replication, Migrating instances to another region |
-| Versioning | Can have multiple versions for different configurations | Typically,
+  # 2.EFS – Elastic File System
+- Works like a **shared network folder**.
+- **File storage (NFS)**.
+- Multiple EC2 across **multiple AZs** can mount it.
+- **Auto-scalable** (no size limit).
+- **Linux only**.
+- **Best for:** Shared website data, microservices, multi-EC2 apps.
+- **Limitations:** Costly, higher latency than EBS.
 
 
 
-### What AWS Image Builder Does
-- Automates image creation pipelines  
-- Applies updates and security patches  
-- Runs tests on images  
-- Outputs AMIs, Docker images, and more  
-- Ensures consistent and compliant golden images
-- Automate VM or Image Creation
-- creation, testing, and deployment of AMIs
-- Can be configured to run at regular intervals
-(e.g., daily, weekly, or monthly)
-- Free
+ # 3.Instance Store
+- **Temporary super-fast** storage inside the EC2 physical host.
+- Very high speed (**NVMe/SSD**).
+- **Free** (included in instance).
+- Data is **lost** if EC2 stops/terminates.
+- **Best for:** Cache, temporary files, high-speed processing.
+- **Limitations:** No snapshot, no backup, fixed size.
+
+
+
+### 🟧 Quick Comparison
+
+| Feature | EBS | EFS | Instance Store |
+|--------|-----|-----|----------------|
+| Storage Type | Block | File (Shared NFS) | Local Block |
+| Persistence | Yes | Yes | No |
+| Multi-AZ | No | Yes | No |
+| Shared Access | Limited | Yes | No |
+| Speed | Fast | Medium | Very Fast |
+| Cost | Medium | High | Free |
+| Best Use | DB, OS | Shared Apps | Temporary Work |
 
 
 
