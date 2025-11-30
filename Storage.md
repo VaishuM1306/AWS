@@ -97,11 +97,10 @@ web servers, or pre-configured environments.
 - Marketplace: Deploying pre-built solutions (e.g.,
 enterprise software).<br><br>
 
-#Run Cleanup Script
+# Run Cleanup Script
 #!/bin/bash
 
-
-# Remove SSH keys----  rm -rf ~/.ssh/authorized_keys
+### Remove SSH keys----  rm -rf ~/.ssh/authorized_keys
 
 
 - Clear user credentials and history
