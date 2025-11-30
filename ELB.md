@@ -15,7 +15,7 @@ You can add more EC2 instances behind a load balancer<br>
 
 
 ### High Availability (HA)<br>
-High Availability (HA) means keeping your service up and running with minimal downtime,so it's always accessible to users.<br>
+High Availability (HA) means keeping your service up and running with minimal downtime,so it's always accessible to users.<br> 
 Ex: running resources in multiple AZs<br>
 
 
@@ -49,8 +49,20 @@ Ex: ASG<br><br><br><br><br>
 
 
 **Distribute Instances**: Deploy instances across multiple Availability Zones for high availability.
-Integrate with ELB: Attach instances to an Elastic Load Balancer to automatically balance traffic.
-Optimize Costs: Scale down during low demand to save on infrastructure costs.
+**Integrate with ELB**: Attach instances to an Elastic Load Balancer to automatically balance traffic.
+**Optimize Costs**: Scale down during low demand to save on infrastructure costs.
+
+
+
+### Steps to Create ASG
+- Launch Template or Configuration
+- Create Auto Scaling Group
+- Select VPC and Subnets
+- Attach Load Balancer (Optional)
+- Configure Scaling Policies
+- Health Checks
+- Add Notifications (Optional)
+- Review and Create
 
 
 
