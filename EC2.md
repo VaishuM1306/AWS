@@ -23,13 +23,10 @@
 6. **Dedicated Instances** – Isolated hardware, cheaper than hosts, compliance workloads. <br>  
 7. **Capacity Reservations** – Reserve capacity in AZ, no long-term commitment.<br><br>
 
-#ElasƟc Network Interface (ENI)
- A virtual network card that aƩaches to an EC2 instance.
-### Each ENI has: 
-- Primary private IPv4 address.
-- -OpƟonal secondary private/public IPs.
-- Security Groups. 
-- MAC address. 
-- ENIs can be moved between instances for high availability. 
-- Example: If one EC2 fails, detach ENI → aƩach to backup EC2 → same IP → traffic resumes.
+# Placement Groups 
+DefiniƟon: Control how your EC2 instances are placed across hardware. 
+### Types: 
+1. Cluster Placement Group → Instances packed closely for low-latency, high throughput.<br>
+2. Spread Placement Group → Instances spread across different hardware for fault tolerance.<br>
+3. ParƟƟon Placement Group → Instances grouped into parƟƟons; used in big data, Hadoop clusters.<br>
 
