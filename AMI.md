@@ -9,25 +9,25 @@ You can also create custom AMIs to include specific software or settings, allowi
 
 
 
-It includes:
-Operating system (e.g., Linux, Windows)
+** It includes: **
+Operating system (e.g., Linux, Windows)<br>
 
-Application server (e.g., Apache, Nginx)
+Application server (e.g., Apache, Nginx)<br>
 
-Pre-installed software and configurations
-
-
-Types of AWS AMIs
-
-Public AMIs: Available to all AWS users. Useful for basic use cases like popular operating systems (e.g., Ubuntu, CentOS).
-
-Private AMIs: Created by a user and only available within that account or shared with specific accounts.
-
-Paid AMIs/Marketplace AMIs: Provided by third parties through AWS Marketplace, offering software like databases, web servers, or pre-configured environments.
+Pre-installed software and configurations<br>
 
 
+** Types of AWS AMIs **
 
-- Common use cases for each type:
+Public AMIs: Available to all AWS users. Useful for basic use cases like popular operating systems (e.g., Ubuntu, CentOS).<br>
+
+Private AMIs: Created by a user and only available within that account or shared with specific accounts.<br>
+
+Paid AMIs/Marketplace AMIs: Provided by third parties through AWS Marketplace, offering software like databases, web servers, or pre-configured environments.<br><br><br>
+
+
+
+### ** Common use cases for each type: **
 Public: Testing or development environments.<br>
 
 Private: Customized setups for production.<br>
