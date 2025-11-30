@@ -1,4 +1,6 @@
-2. AMI (Amazon Machine Image)
+
+ 
+ # AMI (Amazon Machine Image)
 An Amazon Machine Image (AMI) is a pre-configured template that provides the necessary information to launch an EC2 instance in AWS.
 With an AMI, you can launch new EC2 instances with a consistent, predefined configuration.
 
