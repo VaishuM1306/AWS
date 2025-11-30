@@ -9,19 +9,19 @@ They create a point-in-time copy of your data — meaning it saves everything ex
 - Can take snapshots (backups).
 - Can be attached to multiple instances (read-only) in some cases.
 
-## Use Case:
+### Use Case:
 - Databases
 - OS disks, application storage.
 
-## Benefits:
+### Benefits:
 - Simple and automated
 - Cost-effective
 - Secure
 - Highly available and durable
 
----
 
-# Types of Amazon EBS Volumes
+
+### Types of Amazon EBS Volumes
 
 EBS volumes come in two main categories:
 
@@ -33,9 +33,9 @@ EBS volumes come in two main categories:
 3. st1 (Throughput Optimized HDD) – For big data, log processing.  
 4. sc1 (Cold HDD) – Cheapest, less frequent access.
 
----
 
-# Comparision table:
+
+### Comparision table:
 
 | EBS Type | Performance | Best Use Case | Cost Level |
 |----------|-------------|-------------------------------|-------------|
