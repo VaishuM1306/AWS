@@ -79,15 +79,16 @@ EBS volumes come in two main categories:
 
 ### 🟧 Quick Comparison
 
-| Feature | EBS | EFS | Instance Store |
-|--------|-----|-----|----------------|
-| Storage Type | Block | File (Shared NFS) | Local Block |
-| Persistence | Yes | Yes | No |
-| Multi-AZ | No | Yes | No |
-| Shared Access | Limited | Yes | No |
-| Speed | Fast | Medium | Very Fast |
-| Cost | Medium | High | Free |
-| Best Use | DB, OS | Shared Apps | Temporary Work |
+| Feature     | EBS            | EFS                   | Instance Store      |
+|-------------|----------------|------------------------|----------------------|
+| Type        | Block storage  | File storage (shared) | Local block storage  |
+| Data safety | Persistent     | Persistent            | Temporary            |
+| AZ          | AZ-bound       | Multi-AZ              | AZ-bound             |
+| Shared?     | No             | Yes                   | No                   |
+| Speed       | Fast           | Medium                | Very fast            |
+| Cost        | Medium         | High                  | Free                 |
+| Use         | DB, OS         | Shared apps           | Temporary work       |
+
 
 
 
