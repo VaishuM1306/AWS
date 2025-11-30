@@ -99,7 +99,6 @@ enterprise software).<br><br>
 
 # Run Cleanup Script
 #!/bin/bash
-
 ### Remove SSH keys----  rm -rf ~/.ssh/authorized_keys
 
 
