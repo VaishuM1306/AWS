@@ -7,7 +7,7 @@
 # Instance Types 
 ###  Definition: Defines the hardware configuraƟon of an instance (CPU, RAM, storage, networking).
 **  Families of Instance Types: **
-1. General Purpose → Balanced CPU + memory (e.g., t2, t3, m5).<br>
+1. General Purpose → Balanced CPU + memory (e.g., t2, t3, m5,a).<br>
 2. Compute Optimized → High CPU performance (e.g., c5)<br>.
 3. Memory Optimized → For RAM-heavy workloads (e.g., r5, x1).<br>
 4. Storage Optimized → For high disk throughput (e.g., i3, d2).<br> 
