@@ -20,7 +20,7 @@
 3. **Savings Plans** – Commit $/hour, flexible, up to 66% discount.  <br> 
 4. **Spot Instances** – Use unused capacity, very cheap, can be terminated anytime.  <br> 
 5. **Dedicated Hosts** – Entire server for you, expensive, compliance/BYOL.  <br> 
-6. **Dedicated Instances** – Isolated hardware, cheaper than hosts, compliance workloads. <br>  
+6. **Dedicated Instances** – Isolated hardware, cheaper than hosts, compliance workloads.(resesrved physical hadredawre ) <br>  
 7. **Capacity Reservations** – Reserve capacity in AZ, no long-term commitment.<br><br>
 
 # Placement Groups 
