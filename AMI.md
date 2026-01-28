@@ -9,7 +9,7 @@ You can also create custom AMIs to include specific software or settings, allowi
 
 
 
-** It includes: **
+**It includes:**
 Operating system (e.g., Linux, Windows)<br>
 
 Application server (e.g., Apache, Nginx)<br>
@@ -17,7 +17,7 @@ Application server (e.g., Apache, Nginx)<br>
 Pre-installed software and configurations<br>
 
 
-** Types of AWS AMIs **
+**Types of AWS AMIs**
 
 Public AMIs: Available to all AWS users. Useful for basic use cases like popular operating systems (e.g., Ubuntu, CentOS).<br>
 
