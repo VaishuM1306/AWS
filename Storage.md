@@ -58,7 +58,7 @@ EBS volumes come in two main categories:
 
   # 2.EFS – Elastic File System
 - Works like a **shared network folder**.
-- **File storage (NFS)**.
+- **File storage (NFS)-port--2049**.
 - Multiple EC2 across **multiple AZs** can mount it.
 - **Auto-scalable** (no size limit).
 - **Linux only**.
